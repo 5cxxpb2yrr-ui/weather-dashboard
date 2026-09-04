@@ -1,0 +1,28 @@
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Weather Dashboard - Real-time Weather Data',
+  description: 'Interactive weather dashboard with real-time data, forecasts, and analytics from OpenWeatherMap API',
+  keywords: 'weather, dashboard, forecast, real-time, temperature, humidity',
+  openGraph: {
+    title: 'Weather Dashboard',
+    description: 'Real-time weather data with forecasts and analytics',
+    type: 'website',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className="bg-slate-900 text-slate-100">{children}</body>
+    </html>
+  )
+}
